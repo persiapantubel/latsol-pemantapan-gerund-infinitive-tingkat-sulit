@@ -1,0 +1,373 @@
+/* ============================================
+   Persiapantubel - Infinitive & Gerund Practice
+   Custom Styles - Red Theme (#E16B6B)
+   ============================================ */
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* View Sections */
+.view-section {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Packet Cards */
+.packet-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.packet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #E16B6B 0%, #C95555 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.packet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.packet-card:hover::before {
+  transform: scaleX(1);
+}
+
+.packet-card:active {
+  transform: translateY(-2px);
+}
+
+/* Option Buttons */
+.option-btn {
+  position: relative;
+  transition: all 0.2s ease;
+  text-align: left;
+  border: 2px solid #E8EDEB;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: #E16B6B;
+  background-color: #FDF0F0;
+}
+
+.option-btn.selected {
+  border-color: #001E2B;
+  background-color: #001E2B;
+  color: white;
+}
+
+.option-btn.correct {
+  border-color: #22C55E;
+  background-color: #DCFCE7;
+  color: #166534;
+}
+
+.option-btn.wrong {
+  border-color: #EF4444;
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+.option-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* Option Label */
+.option-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.option-btn:not(.selected) .option-label {
+  background-color: #F3F4F6;
+  color: #6B7280;
+}
+
+.option-btn.selected .option-label {
+  background-color: #E16B6B;
+  color: #FFFFFF;
+}
+
+.option-btn.correct .option-label {
+  background-color: #22C55E;
+  color: white;
+}
+
+.option-btn.wrong .option-label {
+  background-color: #EF4444;
+  color: white;
+}
+
+/* Timer Styles */
+.timer-warning {
+  color: #EF4444 !important;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Progress Bar Animation */
+#progress-bar {
+  background-color: #E16B6B;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Explanation Section */
+#explanation-section {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+/* Detail Review Items */
+.review-item {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.review-item:hover {
+  transform: scale(1.1);
+}
+
+.review-item.correct {
+  background-color: #DCFCE7;
+  color: #166534;
+}
+
+.review-item.wrong {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+/* Motivational Message */
+#motivational-message {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Button Hover Effects */
+button {
+  transition: all 0.2s ease;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: #E16B6B;
+  color: #FFFFFF;
+}
+
+/* Focus Styles */
+button:focus-visible,
+.option-btn:focus-visible {
+  outline: 2px solid #E16B6B;
+  outline-offset: 2px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .packet-card {
+    padding: 1rem;
+  }
+  
+  .option-btn {
+    padding: 0.875rem;
+  }
+  
+  .option-label {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  header,
+  footer,
+  button {
+    display: none !important;
+  }
+  
+  .view-section {
+    display: block !important;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 100%;
+  }
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.correct {
+  background-color: #DCFCE7;
+  color: #166534;
+}
+
+.status-badge.wrong {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+/* Answer Status Text */
+.answer-status {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: auto;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+
+.answer-status.correct {
+  background-color: #22C55E;
+  color: white;
+}
+
+.answer-status.wrong {
+  background-color: #EF4444;
+  color: white;
+}
+
+/* Red Theme Specific Classes */
+.text-red-primary {
+  color: #E16B6B;
+}
+
+.bg-red-primary {
+  background-color: #E16B6B;
+}
+
+.bg-red-light {
+  background-color: #FDF0F0;
+}
+
+.border-red-primary {
+  border-color: #E16B6B;
+}
+
+.hover\:text-red-primary:hover {
+  color: #E16B6B;
+}
+
+.hover\:bg-red-primary:hover {
+  background-color: #E16B6B;
+}

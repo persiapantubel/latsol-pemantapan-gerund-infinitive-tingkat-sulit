@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persiapantubel - Latihan Soal Pemantapan Infinitive</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Fonts -->
+  <style>
+    @font-face {
+      font-family: 'MongoDB Value Serif';
+      src: url('https://cdn.jsdelivr.net/gh/mongodb/docs-assets@main/fonts/MongoDBValueSerif-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'MongoDB Value Serif';
+      src: url('https://cdn.jsdelivr.net/gh/mongodb/docs-assets@main/fonts/MongoDBValueSerif-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Euclid Circular A';
+      src: url('https://cdn.jsdelivr.net/gh/mongodb/docs-assets@main/fonts/EuclidCircularA-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Euclid Circular A';
+      src: url('https://cdn.jsdelivr.net/gh/mongodb/docs-assets@main/fonts/EuclidCircularA-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Euclid Circular A';
+      src: url('https://cdn.jsdelivr.net/gh/mongodb/docs-assets@main/fonts/EuclidCircularA-Semibold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'serif': ['"MongoDB Value Serif"', 'Georgia', 'serif'],
+            'sans': ['"Euclid Circular A"', 'system-ui', 'sans-serif'],
+            'mono': ['"Source Code Pro"', 'monospace'],
+          },
+          colors: {
+            'red-primary': '#E16B6B',
+            'red-light': '#FDF0F0',
+            'dark-blue': '#001E2B',
+            'light-bg': '#F9FBFA',
+            'gray-border': '#E8EDEB',
+            'text-primary': '#1C2D38',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light-bg min-h-screen font-sans text-text-primary">
+  
+  <!-- Header -->
+  <header class="bg-dark-blue text-white py-4 px-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-red-primary rounded-lg flex items-center justify-center">
+          <span class="font-serif font-bold text-dark-blue text-xl">P</span>
+        </div>
+        <div>
+          <h1 class="font-serif text-xl font-medium">PERSIAPANTUBEL</h1>
+          <p class="text-xs text-gray-400 font-mono">KHUSUS SISWA</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6">
+        <button id="nav-home" class="text-sm hover:text-red-primary transition-colors">Beranda</button>
+        <button id="nav-packets" class="text-sm hover:text-red-primary transition-colors">Paket Soal</button>
+        <a href="https://persiapantubel.com/product" target="_blank" class="text-sm hover:text-red-primary transition-colors">Persiapantubel</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    
+    <!-- VIEW 1: HOMEPAGE -->
+    <section id="homepage" class="view-section">
+      <!-- Hero Section -->
+      <div class="text-center mb-12 py-12">
+        <h2 class="font-serif text-4xl md:text-5xl font-medium text-dark-blue mb-4">
+          Latihan Soal Pemantapan <span class="text-red-primary">Infinitive</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          Seluruh Kata Kerja yang Ada di Website ini telah Mencakup Seluruh Kelompok Kata Kerja yang Diikuti oleh Infinitive
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="bg-white rounded-xl px-6 py-4 shadow-md border border-gray-100">
+            <p class="font-mono text-3xl font-bold text-red-primary">83</p>
+            <p class="text-sm text-gray-500">Total Soal</p>
+          </div>
+          <div class="bg-white rounded-xl px-6 py-4 shadow-md border border-gray-100">
+            <p class="font-mono text-3xl font-bold text-red-primary">17</p>
+            <p class="text-sm text-gray-500">Paket Soal</p>
+          </div>
+          <div class="bg-white rounded-xl px-6 py-4 shadow-md border border-gray-100">
+            <p class="font-mono text-3xl font-bold text-red-primary">5</p>
+            <p class="text-sm text-gray-500">Menit/Soal</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Packets Grid -->
+      <div class="mb-8">
+        <h3 class="font-serif text-2xl font-medium text-dark-blue mb-6 flex items-center gap-2">
+          <span class="w-1 h-8 bg-red-primary rounded-full"></span>
+          Pilih Paket Soal
+        </h3>
+        <div id="packets-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          <!-- Packets will be generated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Instructions -->
+      <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 mt-12">
+        <h3 class="font-serif text-xl font-medium text-dark-blue mb-4">Petunjuk Pengerjaan</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-red-primary text-dark-blue rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+              <p class="text-gray-600 text-sm">Pilih salah satu paket soal dari grid di atas</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-red-primary text-dark-blue rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+              <p class="text-gray-600 text-sm">Kerjakan soal satu per satu dengan timer 5 menit</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-red-primary text-dark-blue rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+              <p class="text-gray-600 text-sm">Pilih jawaban yang menurut Kamu benar</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-red-primary text-dark-blue rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+              <p class="text-gray-600 text-sm">Klik "Kirim Jawaban" untuk melihat hasil</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-red-primary text-dark-blue rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">5</span>
+              <p class="text-gray-600 text-sm">Baca pembahasan untuk memahami jawaban</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-red-primary text-dark-blue rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">6</span>
+              <p class="text-gray-600 text-sm">Lanjutkan ke soal berikutnya atau review</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: QUIZ PAGE -->
+    <section id="quiz-page" class="view-section hidden">
+      <!-- Quiz Header -->
+      <div class="bg-white rounded-2xl p-4 md:p-6 shadow-md border border-gray-100 mb-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <p class="text-sm text-gray-500 mb-1">Paket Soal</p>
+            <h2 id="quiz-packet-name" class="font-serif text-xl font-medium text-dark-blue">Paket Soal 1</h2>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="text-right">
+              <p class="text-sm text-gray-500">Progress</p>
+              <p id="quiz-progress" class="font-mono font-bold text-dark-blue">1/5</p>
+            </div>
+            <div class="w-px h-12 bg-gray-200"></div>
+            <div class="text-right">
+              <p class="text-sm text-gray-500">Timer</p>
+              <div id="quiz-timer" class="font-mono font-bold text-2xl text-red-primary">05:00</div>
+            </div>
+          </div>
+        </div>
+        <!-- Progress Bar -->
+        <div class="mt-4">
+          <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+            <div id="progress-bar" class="h-full bg-red-primary transition-all duration-300" style="width: 20%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 mb-6">
+        <!-- Question -->
+        <div class="mb-8">
+          <div class="flex items-center gap-2 mb-4">
+            <span id="question-number" class="bg-dark-blue text-white px-3 py-1 rounded-lg font-mono text-sm">Soal 1</span>
+            <span class="text-sm text-gray-500">Pilih jawaban yang paling tepat</span>
+          </div>
+          <p id="question-text" class="text-lg md:text-xl leading-relaxed text-dark-blue">
+            <!-- Question text will be inserted here -->
+          </p>
+        </div>
+
+        <!-- Options -->
+        <div id="options-container" class="space-y-3 mb-8">
+          <!-- Options will be generated by JavaScript -->
+        </div>
+
+        <!-- Submit Button -->
+        <button id="submit-answer-btn" class="w-full md:w-auto bg-red-primary text-dark-blue font-semibold px-8 py-3 rounded-xl hover:bg-opacity-90 transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed">
+          Kirim Jawaban
+        </button>
+
+        <!-- Explanation Section (Hidden by default) -->
+        <div id="explanation-section" class="hidden mt-8 pt-8 border-t border-gray-100">
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-5 h-5 text-red-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h4 class="font-serif text-lg font-medium text-dark-blue">Pembahasan</h4>
+          </div>
+          <div id="explanation-content" class="bg-red-light rounded-xl p-6 border-l-4 border-red-primary">
+            <!-- Explanation will be inserted here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex justify-between items-center">
+        <button id="prev-btn" class="flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          <span>Sebelumnya</span>
+        </button>
+        
+        <button id="next-btn" class="flex items-center gap-2 px-6 py-3 bg-dark-blue text-white rounded-xl hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          <span>Berikutnya</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- VIEW 3: RESULT PAGE -->
+    <section id="result-page" class="view-section hidden">
+      <!-- Result Header -->
+      <div class="text-center mb-10">
+        <div class="inline-flex items-center justify-center w-20 h-20 bg-red-primary rounded-full mb-4">
+          <svg class="w-10 h-10 text-dark-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h2 class="font-serif text-3xl md:text-4xl font-medium text-dark-blue mb-2">Hasil Pengerjaan</h2>
+        <p id="result-packet-name" class="text-gray-500">Paket Soal 1</p>
+      </div>
+
+      <!-- Score Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100">
+          <p class="text-sm text-gray-500 mb-1">Total Soal</p>
+          <p id="result-total" class="font-mono text-3xl font-bold text-dark-blue">5</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100">
+          <p class="text-sm text-gray-500 mb-1">Benar</p>
+          <p id="result-correct" class="font-mono text-3xl font-bold text-green-500">0</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100">
+          <p class="text-sm text-gray-500 mb-1">Salah</p>
+          <p id="result-wrong" class="font-mono text-3xl font-bold text-red-500">0</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100">
+          <p class="text-sm text-gray-500 mb-1">Skor</p>
+          <p id="result-score" class="font-mono text-3xl font-bold text-red-primary">0%</p>
+        </div>
+      </div>
+
+      <!-- Motivational Message -->
+      <div id="motivational-message" class="bg-red-light rounded-2xl p-6 mb-8 border-l-4 border-red-primary">
+        <!-- Message will be inserted by JavaScript -->
+      </div>
+
+      <!-- Detail Review -->
+      <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 mb-8">
+        <h3 class="font-serif text-xl font-medium text-dark-blue mb-4">Detail Jawaban</h3>
+        <div id="detail-review" class="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2">
+          <!-- Detail items will be generated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button id="retry-btn" class="flex items-center justify-center gap-2 px-8 py-4 bg-red-primary text-dark-blue font-semibold rounded-xl hover:bg-opacity-90 transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          Kerjakan Ulang
+        </button>
+        <button id="back-home-btn" class="flex items-center justify-center gap-2 px-8 py-4 bg-dark-blue text-white font-semibold rounded-xl hover:bg-opacity-90 transition-all">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+          </svg>
+          Lihat Paket Soal
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark-blue text-white py-8 mt-12">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p class="text-gray-400 text-sm">
+        &copy; 2026 Persiapantubel untuk Persiapan SPMB TB 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
